@@ -1,0 +1,26 @@
+program volume
+implicit none
+
+real :: name
+real :: numone, numtwo, numthree, Vsphere, Vcube
+
+print *, 'enter your name: '
+read *, name
+print *, 'Hello, ', &
+     name
+print *, 'enter a number'
+read *, numone
+print *, 'enter another number'
+read *,numtwo
+print *, 'enter a final number'
+read *,numthree
+
+Vsphere = (4/3)*atan(1.0)*(numone**3)
+Vcube = numone*numtwo*numthree
+
+print *, 'The volume of a sphere with these dimensions = ', &
+     Vsphere
+print *, 'The volume of a cube with these dimensions = ', &
+     Vcube
+
+end program volume

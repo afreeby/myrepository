@@ -1,0 +1,30 @@
+program loops
+
+implicit none
+integer :: u,v,w,sums
+
+do u = 1,100
+   do v = 1,100   
+      do w = 1,100
+         if(mod(u,3) /= 0) then
+            cycle
+         end if
+         if(mod(v,3) /= 0) then
+            cycle
+         end if
+         if(mod(w,3) /= 0) then
+            cycle
+         end if
+         if(u+v+w = sums) then
+            cycle
+         end if
+         if(w**2 == (u**2) + (v**2)) then
+            print *, u,v,w, &
+                 u+v+w
+            sums = u+v+w
+         end if
+      end do
+   end do
+end do
+
+end program loops

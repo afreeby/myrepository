@@ -1,0 +1,70 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+int main() {
+  cout << "choose an integer between 1 and 5" << endl;
+  int numone;
+  cin >> numone;
+  if (numone == 1) {
+    cout << "You are walking through a forest" << endl;
+  } else if (numone == 2) {
+    cout << "You are walking through the grocery store" << endl;
+  } else if (numone == 3) {
+    cout << "You are walking down the street" << endl;
+  } else if (numone == 4) {
+    cout << "You are walking through a graveyard" << endl;
+  } else if (numone == 5) {
+    cout << "You are walking through a street fair" << endl;
+  } else {
+    cout << "Try again! Choose an integer between 1 and 5!" << endl;
+    cin >> numone;
+    if (numone == 1) {
+      cout << "You are walking through a forest" << endl;
+    } else if (numone == 2) {
+      cout << "You are walking through the grocery store" << endl;
+    } else if (numone == 3) {
+      cout << "You are walking down the street" << endl;
+    } else if (numone == 4) {
+      cout << "You are walking through a graveyard" << endl;
+    } else if (numone == 5) {
+      cout << "You are walking through a street fair" << endl;
+    } else {
+      cout << "I have concluded you are unworthy of playing my game." << endl;
+      cout << "   " << endl;
+      cout << "If you play correctly you can keep going." << " You were walking somewhere playing a fool" << endl; 
+    }
+ }
+  cout << "Choose another integer between 1 and 5" << endl;
+  int numtwo;
+  cin >> numtwo;
+  if (numtwo == 1) {
+    cout << "and suddenly a dragon appears." << endl;
+  } else if (numtwo == 2) {
+    cout << "and suddenly a large man in dark clothes approaches." << endl;
+  } else if (numtwo == 3) {
+    cout << "and suddenly a young child approaches." << endl;
+  } else if (numtwo == 4) {
+    cout << "and suddenly a booming voice erupts from the sky." << endl;
+  } else if (numtwo == 5) {
+    cout << "and suddenly an animate lamp waddles up to you." << endl;
+  } else {
+    cout << "Try again! Choose an integer between 1 and 5!" << endl;
+    cin >> numtwo;
+    if (numtwo == 1) {
+      cout << "and suddenly a dragon appears." << endl;
+    } else if (numtwo == 2) {
+      cout << "and suddenly a large man in dark clothes approaches." << endl;
+    } else if (numtwo == 3) {
+      cout << "and suddenly a young child approaches." << endl;
+    } else if (numtwo == 4) {
+      cout << "and suddenly a booming voice erupts from the sky." << endl;
+    } else if (numtwo == 5) {
+      cout << "and suddenly an animate lamp waddles up to you." << endl;
+    } else {
+      cout << "Bitch." << endl;
+    }
+  }
+  return 0;
+}

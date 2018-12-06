@@ -1,0 +1,17 @@
+program names
+implicit none
+
+character(len=10) :: first, last ! string of max length 10
+character(len=20) :: full ! max length 20
+
+first = '' ! string with no content
+first = 'John' ! 4 letters + 6 trailing blanks 'john      '
+last = 'Doe'
+full = first ! assignment
+full = first // last ! assignment w concatenation
+print *, full
+full = trim(first) // ' ' // trim(last) ! trim cuts off trailing print *, full
+! blanks
+! // concatenates strings
+
+end program names

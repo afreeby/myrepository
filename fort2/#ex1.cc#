@@ -1,0 +1,9 @@
+program control_structures
+
+implicit none
+integer :: innum
+print *, "Enter an integer: "
+read *, innum
+
+if(innum%3 == 0 .and. innum%5 == 0) then
+print *, "FizzBuzz"

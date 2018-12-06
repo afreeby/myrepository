@@ -1,0 +1,14 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+int main() {
+  for (int i=1;i<=10;i++)
+    for (int j=1;j<=i;j++) {
+      cout << "[" << i << ", " << j << "]";
+      if (abs(i-j)<2)
+	cout << "[" << i << "," << j << "]";
+    } 
+      return 0;
+}

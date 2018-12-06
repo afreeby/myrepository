@@ -1,0 +1,35 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+bool primality(int n) {
+  int count = 0;
+  if (n%2==0)
+    return false;
+  for (int i=1;i<=n;i++) {
+    if (n%i==0)
+      count++;
+  }
+  if (count==2)
+    return true;
+  else
+    return false;
+}
+
+
+
+int main() {
+  int how_many{-1};
+  cout << "How many primes would you like?" << endl;
+  cin >> how_many;
+  cout << "Your primes are:" << endl;
+  int number_of_primes_found{0};
+  for (int current_test=2;number_of_primes_found<how_many;current_test++) {
+    if (primality(current_test)) {
+      cout << current_test << endl;
+      number_of_primes_found++;
+    }
+  }
+  return 0;
+}

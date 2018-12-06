@@ -1,0 +1,30 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+int main() {
+  cout << "Type an integer and hit enter" << endl;
+  int numina;
+  int numinb;
+  cin >> numina;
+  cout << "Type another integer and hit enter" << endl;
+  cin >> numinb;
+  if (numina % numinb == 0) {
+    cout << numina << " is a divisor of " << numinb << endl;
+  } else {
+    cout << numina << " is not a divisor of " << numinb << endl;
+  }
+  
+  cout << "Type an integer and hit enter" << endl;
+  int fizzbuzz;
+  cin >> fizzbuzz;
+  if (fizzbuzz % 3 == 0) {
+    cout << "Fizz!" << endl;
+  } else if (fizzbuzz % 5 == 0) {
+      cout << "Buzz!" << endl;
+    } else {
+    cout << "  " << endl;
+  }
+  return 0;
+}

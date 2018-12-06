@@ -1,0 +1,4 @@
+program moduledemo
+  use funcmodule
+print *,myfunction()
+end program moduledemo

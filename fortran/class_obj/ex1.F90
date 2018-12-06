@@ -1,0 +1,28 @@
+module PointClass
+  type Point
+     real :: x,y
+  contains
+    procedure, public :: distance
+  end type Point
+  
+contains
+  real function distance(p1,p2)
+    implicit none
+    class(point) :: p1
+    type(point),intent(in) :: p2
+    distance = sqrt(((abs(p1%x-p2%x))**2)+((abs(p1%y-p2%y)**2)))
+  end function distance
+
+end module PointClass
+
+program exone_dist
+  use PointClass
+  implicit none
+  type(point) :: p1,p2
+
+  p1 = point(1,2)
+  p2 = point(3,0)
+
+  print *, "Distance: ", p1%distance(p2)
+
+end program exone_dist

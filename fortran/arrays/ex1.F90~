@@ -1,0 +1,14 @@
+program avgarray
+
+implicit none
+real(8),dimension(5) :: x = [2,4,6,8,10]
+real(8),dimension(4) :: y
+integer :: i
+
+do i=1,5
+   y = (x(i)+x(i+1))/2
+end do
+
+print *, y
+
+end program avgarray

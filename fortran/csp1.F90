@@ -1,0 +1,17 @@
+program divisors
+
+implicit none
+integer(1) :: inone, intwo
+
+print *, "Give an integer: "
+read *, inone
+print *, "Give another integer: "
+read *, intwo
+
+if (mod(intwo,inone) == 0) then
+print *, inone, "is a divisor of", intwo
+else
+print *, inone, "is not a divisor of", intwo
+end if
+
+end program divisors

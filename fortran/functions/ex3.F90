@@ -1,0 +1,16 @@
+program swap
+
+implicit none
+integer :: i=2,j=3
+call swaproutine(i,j)
+print *, i,j
+
+contains
+  subroutine swaproutine(i,j)
+    integer,intent(inout) :: i,j
+    integer :: holder
+    holder = i
+    i = j
+    j = holder
+  end subroutine swaproutine
+end program swap

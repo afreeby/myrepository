@@ -1,0 +1,23 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+#include <cmath>
+#include <vector>
+using std::vector;
+
+float Lnorm(vector<float> x) {
+  int xsum = x.at(0)+x.at(1)+x.at(2)+x.at(3)+x.at(4);
+  for ( float &n : x ) {
+    n = n/(xsum);
+  }
+  float xsquaresum;
+  xsquaresum = x.at(0)+x.at(1)+x.at(2)+x.at(3)+x.at(4);
+  return xsquaresum;
+};
+
+int main() {
+  vector<float> x = {1.,4.,2.,6.,5.};
+  cout << "sum is: " << Lnorm(x) << endl;
+  return 0;
+}

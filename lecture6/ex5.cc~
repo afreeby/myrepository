@@ -1,0 +1,58 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+int main() {
+  int testnum;
+  cout << "Enter an integer:" << endl;
+  cin >> testnum;
+  for (int i=0, out=0;i<10 && out==0;i++)
+    for (int j=0;j<10 && out==0;j++) {
+      if (i*j > testnum) {
+	cout << "[" << i << "," << j << "]" << endl;
+	out =1;
+	break;
+       if (i*j>testnum  && i+j<1) {
+	cout << "[" << i << "," << j << "]" << endl;
+      } else if (i*j>testnum && i+j<2) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<3) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<4) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<5) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<6) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<7) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<8) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<9) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<10) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<11) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<12) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<13) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<14) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<15) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<16) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<17) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else if (i*j>testnum && i+j<18) {
+        cout <<"[" << i << ","<< j <<"]" << endl;
+      } else {
+	cout << " " << endl;
+       }
+      }
+    }
+      return 0;
+}

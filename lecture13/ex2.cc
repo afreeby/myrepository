@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::string;
+
+int main() {
+  int innum;
+  cout << "Enter an integer:" << endl;
+  cin >> innum;
+  string instring;
+  cout << "Enter a phrase:" << endl;
+  cin >> instring;
+
+  for(char &c : instring) {
+    if (c + innum >= 122) {
+      int remainder = c-122;
+      c = 96 + remainder;
+      cout << remainder << endl; 
+    } if else  {
+      c += innum;
+    }
+  }
+  cout << "Encoded phrase: " << instring << endl;
+  return 0; 
+}
+

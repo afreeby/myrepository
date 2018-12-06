@@ -1,0 +1,6 @@
+program bank_accounts
+
+implicit none
+integer,parameter :: bankone = 100, banktwo = 200
+
+do bankone = 

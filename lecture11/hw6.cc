@@ -1,0 +1,32 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+class Shape {
+public:
+  float width;
+  float height;
+  virtual float getarea() {} ; };
+
+class Rectangle: public Shape {
+public:
+  Rectangle(float width, float height);
+  float getarea() ; };
+
+class Square: public Rectangle {
+public:
+  Square(float size); };
+
+Square::Square (float size) : Rectangle(size, size) { }
+Rectangle::Rectangle(float width, float height) {
+  this->width = width; this->height = height; }
+
+float Rectangle::getarea() { return width * height ; }
+
+int main (int argc, char **argv) {
+  Shape * squarea;
+  Square exvalue(3.33);
+  squarea = &exvalue;
+  cout << "Area is " << squarea->getarea() << endl;
+}

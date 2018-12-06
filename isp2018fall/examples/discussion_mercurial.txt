@@ -1,0 +1,69 @@
+| . +.* O. .      |
+|  o B./o o       |
+|   + *o=o .      |
+|    =**+oo.      |
++----[SHA256]-----+
+Intel(R) Parallel Studio XE 2017 Update 1 for Linux*
+Copyright (C) 2009-2016 Intel Corporation. All rights reserved.
+[eijkhout@isp02 ~]$ ## let's clone a repository
+[eijkhout@isp02 ~]$ hg clone ssh://hg@bitbucket.org/VictorEijkhout/isp2018fall
+remote: No user exists for uid 800571
+abort: no suitable response from remote hg!
+[eijkhout@isp02 ~]$ ## next try: different protocol
+[eijkhout@isp02 ~]$ hg clone https://VictorEijkhout@bitbucket.org/VictorEijkhout/isp2018fall
+destination directory: isp2018fall
+requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 14 changesets with 55 changes to 37 files
+updating to branch default
+34 files updated, 0 files merged, 0 files removed, 0 files unresolved
+[eijkhout@isp02 ~]$ ls
+foo.txt                                         isp2017      lecture6
+hpc-book-private                                isp2018fall  projects2017fall
+intel                                           isptesting   submissions
+introduction-to-scientific-programming-private  lecture4     testing
+[eijkhout@isp02 ~]$ # there is now a directory isp2018fall, brand new
+[eijkhout@isp02 ~]$ ls -ld isp2018fall/
+drwxr-xr-x 6 eijkhout G-25072 129 Sep 20 12:31 isp2018fall/
+[eijkhout@isp02 ~]$ ls !$
+ls isp2018fall/
+background                       examples  sds322392syllabus.pdf
+EijkhoutIntroSciProgramming.pdf  lectures
+[eijkhout@isp02 ~]$ cd !$
+cd isp2018fall/
+[eijkhout@isp02 isp2018fall]$ hg status
+[eijkhout@isp02 isp2018fall]$ # let's see if someone pushed something
+[eijkhout@isp02 isp2018fall]$ # into the repository
+[eijkhout@isp02 isp2018fall]$ hg pull -u
+pulling from https://VictorEijkhout@bitbucket.org/VictorEijkhout/isp2018fall
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 1 changesets with 5 changes to 5 files
+5 files updated, 0 files merged, 0 files removed, 0 files unresolved
+[eijkhout@isp02 isp2018fall]$ # what just changed?
+[eijkhout@isp02 isp2018fall]$ hg log | head -n 20
+changeset:   14:68783c7294e7
+tag:         tip
+user:        Victor Eijkhout <eijkhout@tacc.utexas.edu>
+date:        Thu Sep 20 12:37:53 2018 -0500
+summary:     ready for lecture 7
+
+changeset:   13:bd187b9c614e
+user:        Victor Eijkhout <eijkhout@tacc.utexas.edu>
+date:        Tue Sep 18 13:47:58 2018 -0500
+summary:     example code and discussion
+
+changeset:   12:d929eafd2905
+user:        Victor Eijkhout <eijkhout@tacc.utexas.edu>
+date:        Thu Sep 13 15:54:54 2018 -0500
+summary:     example solutions about looping
+
+changeset:   11:c398d57ed353
+user:        Victor Eijkhout <eijkhout@tacc.utexas.edu>
+date:        Thu Sep 13 07:42:34 2018 -0500
+summary:     lecture 6 quiz
+[eijkhout@isp02 isp2018fall]$
